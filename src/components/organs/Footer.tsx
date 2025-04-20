@@ -4,6 +4,7 @@ import { Barbell, EnvelopeSimple, MapPin, Phone } from "@phosphor-icons/react"
 import { FooterTexts } from "../particles/Data"
 import { List } from "../atoms/List"
 import { useCallback } from "react"
+import { gymName } from "../../utils/data"
 
 
 const Footer = () => {
@@ -28,8 +29,8 @@ const Footer = () => {
                         <Text as="span" className="text-amber-500 absolute -top-5 md:left-5 left-3">
                             <Barbell size={35} color="currentColor" weight="fill" />
                         </Text>
-                        <Text as="span" className="text-white">Gym</Text>
-                        <Text as="span" className="bg-gradient-to-r from-amber-500 to-red-500 bg-clip-text text-transparent">Nex</Text>
+                        <Text as="span" className="text-white">{gymName.firstpart}</Text>
+                        <Text as="span" className="bg-gradient-to-r from-amber-500 to-red-500 bg-clip-text text-transparent">{gymName.secondpart}</Text>
                     </Link>
                     <Text as="p" className="text-zinc-400 text-justify">{FooterTexts.underLogoText}</Text>
                 </div>
